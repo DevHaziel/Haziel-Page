@@ -1,13 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+  <div class="container-sm text-black">
+    <h1>Broke Hook: Events</h1>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item ">
+        <h2 class="accordion-header " id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            <strong>Event: </strong> Ready
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Name: </strong> Ready<br>
+            <strong>Descripcion: </strong> Este evento se ejecuta cuando el jugador se une al servidor.<br>
+            <strong>Variables</strong><br>
+            <code>{0} Player Username</code> <br>
+            <code>{1} Player ID</code>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <strong>Event: </strong> Destroy
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Name: </strong> Destroy<br>
+            <strong>Descripcion: </strong> Este evento se ejecuta cuando el jugador sale del servidor.<br>
+            <strong>Variables</strong><br>
+            <code>{0} Player Username</code> <br>
+            <code>{1} Player ID</code>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <strong>Event: </strong> Chat Global
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Name: </strong> ChatGlobal<br>
+            <strong>Descripcion: </strong> Este evento se ejecuta cada que el jugador envia un mensaje al chat global.<br>
+            <strong>Variables</strong><br>
+            <code>{0} Player Username</code> <br>
+            <code>{1} Player ID</code><br>
+            <code>{2} Message</code>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <strong>Event: </strong> Chat Local
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Name: </strong> ChatLocal<br>
+            <strong>Descripcion: </strong> Este evento se ejecuta cada que el jugador envia un mensaje al chat local.<br>
+            <strong>Variables</strong><br>
+            <code>{0} Player Username</code> <br>
+            <code>{1} Player ID</code><br>
+            <code>{2} Message</code>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <strong>Event: </strong> Command
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Name: </strong> OnCommand<br>
+            <strong>Descripcion: </strong> Este evento se ejecuta cada que el jugador utiliza un comando en el servidor.<br>
+            <strong>Variables</strong><br>
+            <code>{0} Player Username</code> <br>
+            <code>{1} Player ID</code><br>
+            <code>{2} Command</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
